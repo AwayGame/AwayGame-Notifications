@@ -1,3 +1,4 @@
+const config = require('../config')
 const redis = require('redis');
 const REDIS_URL = config.redis.host
 const flatten = require('flat');
@@ -55,7 +56,7 @@ module.exports = {
 	        })
     	})
     },
-    getKey: (lat, long, provider, preference) => {
-    	return [lat, long, provider, preference].join('-')
+    delete: (key) => {
+
     }
 }
